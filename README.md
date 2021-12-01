@@ -8,9 +8,9 @@
 ## Curriculum
 
 * **Section I: Getting Started with RxSwift**
-  > | Ch# | Chapter Subject | Note |
+  > | Ch# | Chapter Subject | Keyword |
   > |:---:| :--- | :--- |
-  > |1| Observables|  |
+  > |1| [Observables](https://www.notion.so/Observables-0d3b84af6e0540f6ac231aa9e6a28138) | Just, Of, From, Dispose, Create |
   > |2| Subjects |  |
   > |3| Implementing Photo Filter App Using RxSwift |  |
 
