@@ -15,7 +15,7 @@
   > |3| Implementing Photo Filter App Using RxSwift |  |
 
 * **Section II: Operators**
-  > | Ch# | Chapter Subject | Note |
+  > | Ch# | Chapter Subject | Keyword |
   > |:---:| :--- | :--- |
   > |1| Filtering Operators |  |
   > |2| TODO List App Using Filter Operations |  |
@@ -25,19 +25,19 @@
 
 
 * **Section III: iOS Apps with RxCocoa**
-  > | Chapter Subject | Note |
+  > | Chapter Subject | Keyword |
   > | :--- | :--- |
   > | RxCocoa |  |
 
 
 * **Section IV: Intermediaate RxSwift/RxCocoa**
-  > | Chapter Subject | Note |
+  > | Chapter Subject | Keyword |
   > | :--- | :--- |
   > | Error Handling |  |
 
 
 * **Section VI: MVVM with Rxswift**
-  > | Chapter Subject | Note |
+  > | Chapter Subject | Keyword |
   > | :--- | :--- |
   > | MVVM with RxSwift |  |
 
