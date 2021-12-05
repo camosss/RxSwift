@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreImage
+import RxSwift
 
 class FilterService {
     private var context: CIContext
@@ -17,12 +18,21 @@ class FilterService {
     
     // MARK: - Helper
     
+    func applyFilter(to inputImage: UIImage) -> Observable<UIImage> {
+        return Observable<UIImage>.create { observer in
+            self.applyFilter(to: inputImage) { filterdImage in
+                observer.onNext(filterdImage)
+            }
+            return Disposables.create()
+        }
+    }
+    
     // 필터링된 파일에 대한 액세스를 제공
-    func applyFilter(to inputImage: UIImage, completion: @escaping ((UIImage) -> ())) {
+    private func applyFilter(to inputImage: UIImage, completion: @escaping ((UIImage) -> ())) {
         
         // create Filter
         let filter = CIFilter(name: "CICMYKHalftone")!
-        filter.setValue(5.0, forKey: kCIInputWidthKey) // 필터에 값 설정
+        filter.setValue(2.0, forKey: kCIInputWidthKey) // 필터에 값 설정
         
         if let sourceImage = CIImage(image: inputImage) {
             filter.setValue(sourceImage, forKey: kCIInputImageKey)

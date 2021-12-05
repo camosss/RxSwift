@@ -43,11 +43,19 @@ class ViewController: UIViewController {
     @IBAction func applyFilterButtonPressed() {
         guard let sourceImage = self.photoImageView.image else { return }
         
-        FilterService().applyFilter(to: sourceImage) { filteredImage in
+        /*FilterService().applyFilter(to: sourceImage) { filteredImage in
             DispatchQueue.main.async {
                 self.photoImageView.image = filteredImage
             }
-        }
+        }*/
+        
+        // subscribe
+        FilterService().applyFilter(to: sourceImage)
+            .subscribe(onNext: { filteredImage in
+                DispatchQueue.main.async {
+                    self.photoImageView.image = filteredImage
+                }
+            }).disposed(by: disposeBag)
     }
     
     // MARK: - Helper
