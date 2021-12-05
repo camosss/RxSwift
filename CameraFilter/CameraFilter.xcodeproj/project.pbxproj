@@ -16,6 +16,7 @@
 		B41C2188275CC05C009744EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41C2186275CC05C009744EC /* LaunchScreen.storyboard */; };
 		B41C2190275CC23B009744EC /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41C218F275CC23B009744EC /* PhotoCollectionViewController.swift */; };
 		B41C2192275CE714009744EC /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41C2191275CE714009744EC /* PhotoCollectionViewCell.swift */; };
+		B41C2194275D0948009744EC /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41C2193275D0948009744EC /* FilterService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		B41C2189275CC05C009744EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B41C218F275CC23B009744EC /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		B41C2191275CE714009744EC /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		B41C2193275D0948009744EC /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
 		FEEDCB60FFBCB3A24F2E50FC /* Pods_CameraFilter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CameraFilter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 				B41C217F275CC059009744EC /* ViewController.swift */,
 				B41C2191275CE714009744EC /* PhotoCollectionViewCell.swift */,
 				B41C218F275CC23B009744EC /* PhotoCollectionViewController.swift */,
+				B41C2193275D0948009744EC /* FilterService.swift */,
 				B41C2181275CC059009744EC /* Main.storyboard */,
 				B41C2184275CC05C009744EC /* Assets.xcassets */,
 				B41C2186275CC05C009744EC /* LaunchScreen.storyboard */,
@@ -215,6 +218,7 @@
 				B41C2180275CC059009744EC /* ViewController.swift in Sources */,
 				B41C2192275CE714009744EC /* PhotoCollectionViewCell.swift in Sources */,
 				B41C217C275CC059009744EC /* AppDelegate.swift in Sources */,
+				B41C2194275D0948009744EC /* FilterService.swift in Sources */,
 				B41C217E275CC059009744EC /* SceneDelegate.swift in Sources */,
 				B41C2190275CC23B009744EC /* PhotoCollectionViewController.swift in Sources */,
 			);
