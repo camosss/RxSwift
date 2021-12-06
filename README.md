@@ -65,7 +65,7 @@ A라는 값을 받아와야 B라는 값을 받아올 수 있고, B라는 값을 
   > |:---:| :--- | :--- |
   > |1| [Observables](https://www.notion.so/Observables-0d3b84af6e0540f6ac231aa9e6a28138) | Just, Of, From, Dispose, Create |
   > |2| [Subjects](https://www.notion.so/Subject-c75ff57eecd549b5b22a1d35455fec56) | Publish Subject, Behavior Subject, Replay Subject, Observable 과 Subject 차이 |
-  > |3| Implementing Photo Filter App Using RxSwift |  |
+  > |3| [Implementing Photo Filter App Using RxSwift](https://www.notion.so/Implementing-Photo-Filter-App-Using-RxSwift-c8484db9fda447b1afb239ce4c7a855a) | [예제 코드](https://github.com/camosss/RxSwift/tree/main/CameraFilter) |
 
 * **Section II: Operators**
   > | Ch# | Chapter Subject | Keyword |
