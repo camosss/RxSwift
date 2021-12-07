@@ -70,7 +70,7 @@ A라는 값을 받아와야 B라는 값을 받아올 수 있고, B라는 값을 
 * **Section II: Operators**
   > | Ch# | Chapter Subject | Keyword |
   > |:---:| :--- | :--- |
-  > |1| [Filtering Operators](https://medium.com/macoclock/rxswift-filtering-operators-57d85134a36b) | Ignoring Operators, Skipping Operators, Taking Operators |
+  > |1| [Filtering Operators](https://www.notion.so/Filtering-Operators-a3d77b28919f4255b3727f0ec70d0dcb) | Ignoring Operators, Skipping Operators, Taking Operators |
   > |2| TODO List App Using Filter Operations |  |
   > |3| Transforming Operators |  |
   > |4| Building News App Using Transforming Operators |  |
