@@ -12,6 +12,11 @@ class AddTaskViewController: UIViewController {
     
     // MARK: - Properties
     
+    private let taskSubject = PublishSubject<Task>()
+    var taskSubjectObservable: Observable<Task> {
+        return taskSubject.asObserver()
+    }
+    
     @IBOutlet weak var prioritySegmentedControl: UISegmentedControl!
     @IBOutlet weak var taskTitleTextField: UITextField!
     
@@ -27,5 +32,12 @@ class AddTaskViewController: UIViewController {
     @IBAction func save() {
         // 여기서 선택한 우선순위를 TaskListVC의 우선순위 표시를 위한 task 전달을 하기 위해 rxswift 사용
         guard let priority = Priority(rawValue: self.prioritySegmentedControl.selectedSegmentIndex), let title = self.taskTitleTextField.text else { return }
+        
+        let task = Task(title: title, priority: priority)
+        
+        // Subject 호출, 전송
+        taskSubject.onNext(task)
+        
+        self.dismiss(animated: true)
     }
 }
