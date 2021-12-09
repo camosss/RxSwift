@@ -73,7 +73,7 @@ A라는 값을 받아와야 B라는 값을 받아올 수 있고, B라는 값을 
   > |1| [Filtering Operators](https://www.notion.so/Filtering-Operators-a3d77b28919f4255b3727f0ec70d0dcb) | Ignoring Operators, Skipping Operators, Taking Operators |
   > |2| [TODO List App Using Filter Operations](https://www.notion.so/TODO-List-App-Using-Filter-Operations-c7a55fbacee7492d92607ba0d8db3319) | [GoodList 코드](https://github.com/camosss/RxSwift/tree/main/GoodList) |
   > |3| [Transforming Operators](https://www.notion.so/Transforming-Operators-1e78cc2409c84678a57623e463669477) | To Array, Map, Flat Map, Flat Map Latest |
-  > |4| Building News App Using Transforming Operators |  |
+  > |4| [Building News App Using Transforming Operators](https://www.notion.so/Building-News-App-Using-Transforming-Operators-88d566808bfd48b29bbd1fbe58a5ae39) | [GoodNews 코드](https://github.com/camosss/RxSwift/tree/main/GoodNews) |
   > |5| Combining Operators |  |
 
 
