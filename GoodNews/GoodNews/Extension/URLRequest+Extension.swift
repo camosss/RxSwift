@@ -25,6 +25,6 @@ extension URLRequest {
             }.map { data -> T? in
                 // decoding된 데이터 반환
                 return try? JSONDecoder().decode(T.self, from: data)
-            }
+            }.asObservable()
     }
 }
