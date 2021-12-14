@@ -76,20 +76,33 @@ class ViewController: UIViewController {
         
         let search = URLRequest.load(resource: resource)
             .observe(on: MainScheduler.instance) // DispatchQueue.main.async
-            .catchAndReturn(WeatherResult.empty) // do catch
+            .asDriver(onErrorJustReturn: WeatherResult.empty)
+        
+//            .catchAndReturn(WeatherResult.empty) // do catch
+            
             /*.subscribe(onNext: { result in
                 let weather = result.main
                 self.displayWeather(weather)
             }).disposed(by: disposeBag)*/
         
-        // bind를 사용하여 데이터에서 옵저버블을 바인딩하고, 데이터를 가져와 화면에 바인딩
+        /*// bind를 사용하여 데이터에서 옵저버블을 바인딩하고, 데이터를 가져와 화면에 바인딩
         search.map {"\($0.main.temp) ℉"}
         .bind(to: self.temperatureLabel.rx.text)
         .disposed(by: disposeBag)
         
         search.map {"\($0.main.humidity) 💦"}
         .bind(to: self.humidityLabel.rx.text)
+        .disposed(by: disposeBag)*/
+        
+        // drive
+        search.map {"\($0.main.temp) ℉"}
+        .drive(self.temperatureLabel.rx.text)
         .disposed(by: disposeBag)
+        
+        search.map {"\($0.main.humidity) 💦"}
+        .drive(self.humidityLabel.rx.text)
+        .disposed(by: disposeBag)
+        
     }
 }
 

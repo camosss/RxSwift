@@ -31,7 +31,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ss-t1-rRf">
-                                <rect key="frame" x="177.5" y="566" width="59" height="30"/>
+                                <rect key="frame" x="177.5" y="482" width="59" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -40,12 +40,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Ss-t1-rRf" secondAttribute="bottom" constant="266" id="48q-mK-d6g"/>
                             <constraint firstItem="tQS-X0-nOo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8wa-5V-rud"/>
                             <constraint firstItem="9Ss-t1-rRf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C1a-MO-9Gr"/>
                             <constraint firstItem="KxM-WS-yC5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TSz-xb-sfb"/>
                             <constraint firstItem="KxM-WS-yC5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wid-FV-ax7"/>
                             <constraint firstItem="tQS-X0-nOo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="enH-T4-bSk"/>
+                            <constraint firstItem="9Ss-t1-rRf" firstAttribute="top" secondItem="KxM-WS-yC5" secondAttribute="bottom" constant="10" id="t7Q-aI-uIa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Good Weather" id="VgW-wy-dv7"/>
