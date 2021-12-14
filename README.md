@@ -78,8 +78,8 @@ A라는 값을 받아와야 B라는 값을 받아올 수 있고, B라는 값을 
 
 
 * **Section III: iOS Apps with RxCocoa**
-  > | Chapter Subject | Keyword |
-  > | :--- | :--- |
+  > | Ch# | Chapter Subject | Keyword |
+  > | :---: | :--- | :--- |
   > |1| [RxCocoa](https://www.notion.so/RxCocoa-2333716ea79c4bcfa594bd7dd79e1d7b) | Control Property, Binder, Traits |
   > |2| [Building Weather App Using RxCocoa](https://www.notion.so/Building-Weather-App-Using-RxCocoa-52d5c8d3c78446e7a5f7e06d1eb5ffc4)| [GoodWeather ](https://github.com/camosss/RxSwift/tree/main/GoodWeather) |
 
