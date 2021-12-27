@@ -87,7 +87,7 @@ A라는 값을 받아와야 B라는 값을 받아올 수 있고, B라는 값을 
 * **Section IV: Intermediaate RxSwift/RxCocoa**
   > | Chapter Subject | Keyword |
   > | :--- | :--- |
-  > | Error Handling |  |
+  > | [Error Handling](https://www.notion.so/Error-Handling-cd065975c2e94e8a8bddf6d9f53f16a2) | Throwing Errors, Handle Errors with Catch, Retrying on Error |
 
 
 * **Section VI: MVVM with Rxswift**
