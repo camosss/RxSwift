@@ -65,6 +65,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B42E0BFA2779EB9900536531 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B47A903927687EA000C05428 /* AppDelegate.swift */,
+				B47A903B27687EA000C05428 /* SceneDelegate.swift */,
+				B47A904227687EA300C05428 /* Assets.xcassets */,
+				B47A904427687EA300C05428 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		B47A902D27687EA000C05428 = {
 			isa = PBXGroup;
 			children = (
@@ -86,14 +97,11 @@
 		B47A903827687EA000C05428 /* GoodWeather */ = {
 			isa = PBXGroup;
 			children = (
-				B47A9050276887A700C05428 /* Extension */,
 				B47A904D2768853600C05428 /* Model */,
-				B47A903927687EA000C05428 /* AppDelegate.swift */,
-				B47A903B27687EA000C05428 /* SceneDelegate.swift */,
-				B47A903D27687EA000C05428 /* ViewController.swift */,
+				B47A9050276887A700C05428 /* Extension */,
 				B47A903F27687EA000C05428 /* Main.storyboard */,
-				B47A904227687EA300C05428 /* Assets.xcassets */,
-				B47A904427687EA300C05428 /* LaunchScreen.storyboard */,
+				B47A903D27687EA000C05428 /* ViewController.swift */,
+				B42E0BFA2779EB9900536531 /* Resource */,
 				B47A904727687EA300C05428 /* Info.plist */,
 			);
 			path = GoodWeather;

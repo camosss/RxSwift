@@ -23,10 +23,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         populateData()
     }
-
 
     // MARK: - Helper
     
@@ -74,19 +72,23 @@ class ViewController: UIViewController {
         
         let resource = Resource<WeatherResult>(url: url)
         
-        let search = URLRequest.load(resource: resource)
+        /*URLRequest.load(resource: resource)
             .observe(on: MainScheduler.instance) // DispatchQueue.main.async
-            .asDriver(onErrorJustReturn: WeatherResult.empty)
-        
-//            .catchAndReturn(WeatherResult.empty) // do catch
-            
-            /*.subscribe(onNext: { result in
+            .catchAndReturn(WeatherResult.empty) // do catch
+            .subscribe(onNext: { result in
                 let weather = result.main
                 self.displayWeather(weather)
             }).disposed(by: disposeBag)*/
         
-        /*// bind를 사용하여 데이터에서 옵저버블을 바인딩하고, 데이터를 가져와 화면에 바인딩
-        search.map {"\($0.main.temp) ℉"}
+        
+        // MARK: - Map
+        
+        /*let search = URLRequest.load(resource: resource)
+                    .observe(on: MainScheduler.instance)
+                    .catchAndReturn(WeatherResult.empty)*/
+        
+        //bind를 사용하여 데이터에서 옵저버블을 바인딩하고, 데이터를 가져와 화면에 바인딩
+        /*search.map {"\($0.main.temp) ℉"}
         .bind(to: self.temperatureLabel.rx.text)
         .disposed(by: disposeBag)
         
@@ -94,6 +96,23 @@ class ViewController: UIViewController {
         .bind(to: self.humidityLabel.rx.text)
         .disposed(by: disposeBag)*/
         
+        
+        // MARK: - Drive
+        
+       /* let search = URLRequest.load(resource: resource)
+            .observe(on: MainScheduler.instance) // DispatchQueue.main.async
+            .asDriver(onErrorJustReturn: WeatherResult.empty)*/
+        
+        // Handle Errors with Catch
+        let search = URLRequest.load(resource: resource)
+            .retry(3) // Retrying on Error
+            .observe(on: MainScheduler.instance)
+            .catch { error in
+                print(error.localizedDescription)
+                return Observable.just(WeatherResult.empty)
+            }.asDriver(onErrorJustReturn: WeatherResult.empty)
+        
+
         // drive
         search.map {"\($0.main.temp) ℉"}
         .drive(self.temperatureLabel.rx.text)
