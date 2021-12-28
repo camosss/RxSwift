@@ -81,7 +81,7 @@ A라는 값을 받아와야 B라는 값을 받아올 수 있고, B라는 값을 
   > | Ch# | Chapter Subject | Keyword |
   > | :---: | :--- | :--- |
   > |1| [RxCocoa](https://www.notion.so/RxCocoa-2333716ea79c4bcfa594bd7dd79e1d7b) | Control Property, Binder, Traits |
-  > |2| [Building Weather App Using RxCocoa](https://www.notion.so/Building-Weather-App-Using-RxCocoa-52d5c8d3c78446e7a5f7e06d1eb5ffc4)| [GoodWeather ](https://github.com/camosss/RxSwift/tree/main/GoodWeather) |
+  > |2| [Building Weather App Using RxCocoa](https://www.notion.so/Building-Weather-App-Using-RxCocoa-52d5c8d3c78446e7a5f7e06d1eb5ffc4)| [GoodWeather 코드](https://github.com/camosss/RxSwift/tree/main/GoodWeather) |
 
 
 * **Section IV: Intermediaate RxSwift/RxCocoa**
@@ -93,5 +93,5 @@ A라는 값을 받아와야 B라는 값을 받아올 수 있고, B라는 값을 
 * **Section VI: MVVM with Rxswift**
   > | Chapter Subject | Keyword |
   > | :--- | :--- |
-  > | MVVM with RxSwift |  |
+  > | [MVVM with RxSwift](https://www.notion.so/MVVM-with-RxSwift-882eb18e1849473b9ef55d39455411f3) | [NewsApp(MVVM) 코드](https://github.com/camosss/RxSwift/tree/main/NewsAppMVVM) |
 
