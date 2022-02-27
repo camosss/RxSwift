@@ -53,10 +53,14 @@ A라는 값을 받아와야 B라는 값을 받아올 수 있고, B라는 값을 
 </div>
 </details>
 
-## reference
+<br>
+
+## Reference
 - [ReactiveX](http://reactivex.io/)
 - [Udemy Mastering Rxswift in iOS](https://www.udemy.com/course/mastering-rxswift-in-ios/)
+- [KxCoding](https://www.youtube.com/watch?v=m41N4czHGF4&list=PLziSvys01Oek7ANk4rzOYobnUU_FTu5ns)
 
+<br>
 
 ## Curriculum
 
@@ -90,8 +94,19 @@ A라는 값을 받아와야 B라는 값을 받아올 수 있고, B라는 값을 
   > | [Error Handling](https://www.notion.so/Error-Handling-cd065975c2e94e8a8bddf6d9f53f16a2) | Throwing Errors, Handle Errors with Catch, Retrying on Error |
 
 
-* **Section VI: MVVM with Rxswift**
+* **Section V: MVVM with Rxswift**
   > | Chapter Subject | Keyword |
   > | :--- | :--- |
   > | [MVVM with RxSwift](https://www.notion.so/MVVM-with-RxSwift-882eb18e1849473b9ef55d39455411f3) | [NewsApp(MVVM) 코드](https://github.com/camosss/RxSwift/tree/main/NewsAppMVVM) |
+
+
+* **Section VI: MVVM-C with Rxswift**
+> | Chapter Subject | Keyword |
+  > | :--- | :--- |
+  > | Building Memo App | [GoodMemo 코드](https://github.com/camosss/RxSwift/tree/main/GoodMemo) |
+
+
+
+
+
 
