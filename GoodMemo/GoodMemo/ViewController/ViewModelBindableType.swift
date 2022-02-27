@@ -21,6 +21,9 @@ protocol ViewModelBindableType {
 
 /// ViewController에 추가된 ViewModel의 실제 속성을 저장
 /// bindViewModel 메서드를 자동으로 추가하는 메서드 구현
+
+/// where Self - 해당 Protocol의 extension을 특정 Protocol을 상속했을 때만 사용될 수 있도록 하는 제약조건 추가 기능
+/// 즉, 해당 extension에서 만든 메서드와 프로퍼티는 ViewController를 상속받지 않은 곳에서는 사용할 수가 없다.
 extension ViewModelBindableType where Self: UIViewController {
     mutating func bind(viewModel: Self.ViewModelType) {
         self.viewModel = viewModel

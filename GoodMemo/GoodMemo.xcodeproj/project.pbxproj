@@ -24,6 +24,10 @@
 		B4523B7027CBA31000BF0204 /* MemoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4523B6F27CBA31000BF0204 /* MemoDetailViewModel.swift */; };
 		B4523B7227CBA31F00BF0204 /* MemoComposeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4523B7127CBA31F00BF0204 /* MemoComposeViewModel.swift */; };
 		B4523B7427CBA36B00BF0204 /* ViewModelBindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4523B7327CBA36B00BF0204 /* ViewModelBindableType.swift */; };
+		B4523B7627CBAA5100BF0204 /* TransitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4523B7527CBAA5100BF0204 /* TransitionModel.swift */; };
+		B4523B7827CBAAAD00BF0204 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4523B7727CBAAAD00BF0204 /* Scene.swift */; };
+		B4523B7A27CBAD9100BF0204 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4523B7927CBAD9100BF0204 /* SceneCoordinatorType.swift */; };
+		B4523B7C27CBAF7700BF0204 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4523B7B27CBAF7700BF0204 /* SceneCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +51,10 @@
 		B4523B6F27CBA31000BF0204 /* MemoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewModel.swift; sourceTree = "<group>"; };
 		B4523B7127CBA31F00BF0204 /* MemoComposeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoComposeViewModel.swift; sourceTree = "<group>"; };
 		B4523B7327CBA36B00BF0204 /* ViewModelBindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindableType.swift; sourceTree = "<group>"; };
+		B4523B7527CBAA5100BF0204 /* TransitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionModel.swift; sourceTree = "<group>"; };
+		B4523B7727CBAAAD00BF0204 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		B4523B7927CBAD9100BF0204 /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
+		B4523B7B27CBAF7700BF0204 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
 		CCC0C27C58D33D456F6B660B /* Pods-GoodMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodMemo.release.xcconfig"; path = "Target Support Files/Pods-GoodMemo/Pods-GoodMemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +165,10 @@
 		B426D10527CB82FF001B0857 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				B4523B7527CBAA5100BF0204 /* TransitionModel.swift */,
+				B4523B7727CBAAAD00BF0204 /* Scene.swift */,
+				B4523B7927CBAD9100BF0204 /* SceneCoordinatorType.swift */,
+				B4523B7B27CBAF7700BF0204 /* SceneCoordinator.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -294,14 +306,18 @@
 			files = (
 				B426D0F527CB7E78001B0857 /* GoodMemo.xcdatamodeld in Sources */,
 				B4523B7227CBA31F00BF0204 /* MemoComposeViewModel.swift in Sources */,
+				B4523B7C27CBAF7700BF0204 /* SceneCoordinator.swift in Sources */,
+				B4523B7827CBAAAD00BF0204 /* Scene.swift in Sources */,
 				B4523B6A27CBA28700BF0204 /* MemoDetailViewController.swift in Sources */,
 				B4523B7427CBA36B00BF0204 /* ViewModelBindableType.swift in Sources */,
 				B4523B6627CB87B100BF0204 /* MemoryStorage.swift in Sources */,
 				B426D0EB27CB7E78001B0857 /* AppDelegate.swift in Sources */,
 				B4523B6227CB863F00BF0204 /* MemoStorageType.swift in Sources */,
 				B426D0ED27CB7E78001B0857 /* SceneDelegate.swift in Sources */,
+				B4523B7A27CBAD9100BF0204 /* SceneCoordinatorType.swift in Sources */,
 				B4523B6E27CBA30100BF0204 /* MemoListViewModel.swift in Sources */,
 				B4523B7027CBA31000BF0204 /* MemoDetailViewModel.swift in Sources */,
+				B4523B7627CBAA5100BF0204 /* TransitionModel.swift in Sources */,
 				B4523B6827CBA25500BF0204 /* MemoListViewController.swift in Sources */,
 				B4523B6C27CBA28F00BF0204 /* MemoComposeViewController.swift in Sources */,
 				B426D10727CB8362001B0857 /* Memo.swift in Sources */,
@@ -459,6 +475,7 @@
 				INFOPLIST_FILE = GoodMemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -488,6 +505,7 @@
 				INFOPLIST_FILE = GoodMemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
