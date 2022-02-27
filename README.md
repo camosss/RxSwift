@@ -103,7 +103,7 @@ A라는 값을 받아와야 B라는 값을 받아올 수 있고, B라는 값을 
 * **Section VI: MVVM-C with Rxswift**
   > | Chapter Subject | Keyword |
   > | :--- | :--- |
-  > | Building Memo App | [GoodMemo 코드](https://github.com/camosss/RxSwift/tree/main/GoodMemo) |
+  > | [MVVM-C with Building Memo App](https://www.notion.so/Building-Memo-App-b92971e0ef5f46229a7ffc8066953760) | [GoodMemo 코드](https://github.com/camosss/RxSwift/tree/main/GoodMemo) |
 
 
 
