@@ -39,5 +39,20 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
             .disposed(by: rx.disposeBag)
 
         addButton.rx.action = viewModel.makeCreateAction()
+
+        /// TableView에서 Memo를 선택하면 ViewModel을 통해서 detail Action을 전달하고 (선택할 Memo 필요)
+        /// 선택한 Cell은 선택 해제 (indexPath가 필요)
+        /// zip - 선택된 Memo와 indexPath가 튜플 형태로 방출
+        Observable.zip(
+            listTableView.rx.modelSelected(Memo.self),
+            listTableView.rx.itemSelected
+        )
+            .do(onNext: { [unowned self] (_, indexPath) in
+                /// do 연산자를 추가해서 next 이벤트가 전달되면 선택 상태 해제
+                self.listTableView.deselectRow(at: indexPath, animated: true)
+            })
+                .map { $0.0 } /// 선택 상태를 처리하고 나서는 indexPath가 필요없기 때문에, map 연산자로 데이터만 방출하도록 변경
+                .bind(to: viewModel.detailAction.inputs) /// 전달된 Memo를 detailAction과 Binding
+                .disposed(by: rx.disposeBag)
     }
 }

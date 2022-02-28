@@ -60,4 +60,24 @@ class MemoListViewModel: CommonViewModel {
                 }
         }
     }
+
+    /// -> MemoDetailViewController (메서드 형태가 아닌 속성 형태로 구현)
+    /// 입력 형식은 Memo, 출력 형식은 Void
+    lazy var detailAction: Action<Memo, Void> = {
+        return Action { memo in
+            let detailViewModel = MemoDetailViewModel(
+                memo: memo,
+                title: "메모 보기",
+                sceneCoordinator: self.sceneCoordinator,
+                storage: self.storage
+            )
+
+            let detailScene = Scene.detail(detailViewModel)
+            return self.sceneCoordinator.transition(
+                to: detailScene,
+                using: .push,
+                animated: true
+            ).asObservable().map { _ in }
+        }
+    }()
 }

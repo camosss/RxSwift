@@ -45,4 +45,10 @@ class MemoDetailViewModel: CommonViewModel {
 
         super.init(title: title, sceneCoordinator: sceneCoordinator, storage: storage)
     }
+
+    /// navigationController의 back Button은 SceneCoordinator와 아무런 관련이 없기 때문에 close() 메서드를 실행해야 함
+    /// navigationController의 back Button과 Binding할 Action 추가
+    lazy var popAction = CocoaAction { [unowned self] in
+        return self.sceneCoordinator.close(animated: true).asObservable().map { _ in }
+    }
 }
