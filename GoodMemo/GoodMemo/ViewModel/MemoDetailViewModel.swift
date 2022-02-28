@@ -45,4 +45,45 @@ class MemoDetailViewModel: CommonViewModel {
 
         super.init(title: title, sceneCoordinator: sceneCoordinator, storage: storage)
     }
+
+    /// saveAction 처리 메서드
+    /// ComposeViewModel로 전달하는 Action
+    func performUpdate(memo: Memo) -> Action<String, Void> {
+        /// 입력 타입: String -> 입력값으로 Memo를 업데이트
+        return Action { input in
+            /// update: 편집된 메모를 방출 / Observable이 방출하는 형식은 Void
+            /// 방출하는 형식이 다르기 때문에 map 연산자로 해결
+            self.storage.update(memo: memo, content: input)
+                .subscribe(onNext: { updated in
+                    self.contents.onNext([ /// 새로운 내용을 subject로 전달(편집된 내용을 next 이벤트에 담아서 방출)
+                        updated.content,
+                        self.formatter.string(from: updated.insertDate)
+                    ])
+                })
+                .disposed(by: self.rx.disposeBag)
+
+            /// 빈 Observable return
+            return Observable.empty()
+        }
+    }
+
+    /// 보기 화면의 편집버튼과 Binding할 Action
+    func makeEditAction() -> CocoaAction {
+        return CocoaAction { _ in
+            let composeViewModel = MemoComposeViewModel(
+                title: "메모 편집",
+                content: self.memo.content,
+                sceneCoordinator: self.sceneCoordinator,
+                storage: self.storage,
+                saveAction: self.performUpdate(memo: self.memo)
+            )
+
+            let composeScene = Scene.compose(composeViewModel)
+            return self.sceneCoordinator.transition(
+                to: composeScene,
+                using: .modal,
+                animated: true
+            ).asObservable().map { _ in }
+        }
+    }
 }
