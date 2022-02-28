@@ -5,14 +5,32 @@
 //  Created by 강호성 on 2022/02/27.
 //
 
-import Foundation
+import UIKit
 import RxSwift
 import RxCocoa
 import Action
+import RxDataSources
+
+/// SectionData: Int, rowData: Memo
+typealias MemoSectionModel = AnimatableSectionModel<Int, Memo>
 
 class MemoListViewModel: CommonViewModel {
+
+    /// TableView Binding에 사용할 dataSource 속성
+    let dataSource: RxTableViewSectionedAnimatedDataSource<MemoSectionModel> = {
+        let ds = RxTableViewSectionedAnimatedDataSource<MemoSectionModel>(
+            configureCell: { (dataSource, tableView, indexPath, memo
+            ) -> UITableViewCell in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            cell.textLabel?.text = memo.content
+            return cell
+        })
+        ds.canEditRowAtIndexPath = { _, _ in return true }
+        return ds
+    }()
+
     /// 메모 목록: TableView와 Binding할 수 있는 속성 추가
-    var memoList: Observable<[Memo]> {
+    var memoList: Observable<[MemoSectionModel]> {
         return storage.memoList()
     }
 
