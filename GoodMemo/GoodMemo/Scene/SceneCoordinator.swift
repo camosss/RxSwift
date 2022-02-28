@@ -61,7 +61,7 @@ class SceneCoordinator: SceneCoordinatorType {
             }
 
             /// delegate 메서드가 호출되는 시점마다 next 이벤트를 방출하는 Control event
-            /// 여기에 구독자를 추가하고, currentVC 속성을 업데이트
+            /// 여기에 구독자를 추가하고, pop했을 때 currentVC 속성을 업데이트
             nav.rx.willShow
                 .subscribe(onNext: { [unowned self] event in
                     self.currentVC = event.viewController.sceneViewController
