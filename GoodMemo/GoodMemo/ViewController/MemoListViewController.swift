@@ -54,5 +54,11 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
                 .map { $0.0 } /// 선택 상태를 처리하고 나서는 indexPath가 필요없기 때문에, map 연산자로 데이터만 방출하도록 변경
                 .bind(to: viewModel.detailAction.inputs) /// 전달된 Memo를 detailAction과 Binding
                 .disposed(by: rx.disposeBag)
+
+        /// Swipe delete 모드를 활성화하고, 삭제 버튼과 Action을 Binding
+        /// ControlEvent를 return -> ControlEvent는 메모를 삭제할 때마다 next 이벤트를 방출
+        listTableView.rx.modelDeleted(Memo.self)
+            .bind(to: viewModel.deleteAction.inputs) /// ControlEvent를 delete 이벤트와 Binding
+            .disposed(by: rx.disposeBag)
     }
 }
