@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxDataSources
 import NSObject_Rx
 
 class MemoListViewController: UIViewController, ViewModelBindableType {
@@ -26,6 +27,19 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
         
     }
 
+    /// TableView Binding에 사용할 dataSource 속성
+    let dataSource: RxTableViewSectionedAnimatedDataSource<MemoSectionModel> = {
+        let ds = RxTableViewSectionedAnimatedDataSource<MemoSectionModel>(
+            configureCell: { (dataSource, tableView, indexPath, memo
+            ) -> UITableViewCell in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            cell.textLabel?.text = memo.content
+            return cell
+        })
+        ds.canEditRowAtIndexPath = { _, _ in return true }
+        return ds
+    }()
+
     /// ViewModel과 View를 Binding
     func bindViewModel() {
         viewModel.title
@@ -34,7 +48,7 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
 
         /// viewModel의 dataSource와 Binding
         viewModel.memoList
-            .bind(to: listTableView.rx.items(dataSource: viewModel.dataSource))
+            .bind(to: listTableView.rx.items(dataSource: self.dataSource))
             .disposed(by: rx.disposeBag)
 
         addButton.rx.action = viewModel.makeCreateAction()
